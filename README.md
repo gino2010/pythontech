@@ -1,4 +1,4 @@
-# pythontech
+# Python Tech
 
 ### Purpose
 用于个人Python学习记录使用
