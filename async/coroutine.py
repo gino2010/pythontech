@@ -54,12 +54,14 @@ if __name__ == '__main__':
     print('ready to call send')
     t = gen.send('outside')
     print('all %s' % t)
+    gen.close()
 
     g = grep('python')
     next(g)
     g.send("Yeah, but no, but yeah")
     g.send("python generators rock!")
     g.send("a series of tubes")
+    g.close()
 
     c = consumer()
     produce(c)
