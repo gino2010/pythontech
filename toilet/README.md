@@ -1,12 +1,7 @@
 # Toilet
 
-一个搞笑的算法面试题，搞笑两个原因：
-1. 场景假设有很多牵强之处（即不准确，不完整），这样不准确的需求推出的"解决方案"有点让人莫名其妙
-2. 是出题者设计这么一个贴近生活（工作）细节的场景，有点给人一种小题大做的搞笑
-
-A funny interview question for algorithm, two reasons for funny:
-1. The scenario assumes a lot of far-fetched (inaccurate, incomplete), so the "solution" of the inaccurate demand is a bit confusing.
-2. It is the scene of the design of such a close to the details of life(work), a little bit funny of making a fuss over a trifle
+一个略显无聊的算法面试题，场景虽然现实存在，但较少遇见并且忽略很多细节。
+A slightly boring algorithmic interview question, the scene does really exists, but it rarely encounters and ignores a lot of details.
 
 ### Question
 
