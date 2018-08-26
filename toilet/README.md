@@ -1,6 +1,7 @@
 # Toilet
 
 一个略显无聊的算法面试题，场景虽然现实存在，但较少遇见并且忽略很多细节。
+
 A slightly boring algorithmic interview question, the scene does really exists, but it rarely encounters and ignores a lot of details.
 
 ### Question
