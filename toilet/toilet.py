@@ -34,6 +34,7 @@ def policy_all(init, person, final):
             init = item
         else:
             count += item ^ final
+            init = final
     return count
 
 
@@ -53,6 +54,7 @@ def evaluate(text):
 if __name__ == '__main__':
     try:
         evaluate('UUUDDUDU')
+        evaluate('UUDUDUDUUUUDDUDU')
         evaluate('DUUDDUDU')
         evaluate('DUUaDUDU')
     except Exception as e:
