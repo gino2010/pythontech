@@ -1,6 +1,7 @@
 # 
 # author gino
 # created on 2018/8/5
+# https://py.checkio.org/en/mission/most-wanted-letter/
 import string
 
 

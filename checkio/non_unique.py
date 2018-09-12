@@ -1,6 +1,7 @@
 # 
 # author gino
 # created on 2018/8/6
+# https://py.checkio.org/en/mission/non-unique-elements/
 
 
 def checkio(data: list) -> list:

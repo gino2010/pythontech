@@ -1,6 +1,7 @@
 # 
 # author gino
 # created on 2018/7/29
+# https://py.checkio.org/en/mission/house-password/
 
 
 def checkio(password: str) -> bool:
