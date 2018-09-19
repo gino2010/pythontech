@@ -82,10 +82,13 @@ class HashRing(object):
         return int(hashlib.md5(key.encode()).hexdigest(), 16) % (2 ** 32)
 
     def generate_data(self, length, size):
-        data = []
-        for i in range(size):
-            data.append(''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length)))
-        return data
+        """
+        generate data for test
+        :param length:  length of one word
+        :param size: data size
+        :return: data
+        """
+        return [''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length)) for _ in range(size)]
 
 
 # test code
