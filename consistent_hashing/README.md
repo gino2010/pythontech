@@ -19,3 +19,8 @@
 [1](http://www.zsythink.net/archives/1182/)
 [2](http://xiaorui.cc/2014/09/20/%E4%BD%BF%E7%94%A8hashring%E5%AE%9E%E7%8E%B0python%E4%B8%8B%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7hash/)
 [3](https://blog.csdn.net/cywosp/article/details/23397179)
+
+### Package
+你可以使用的成熟包：
+
+[hash_ring](https://github.com/Doist/hash_ring)

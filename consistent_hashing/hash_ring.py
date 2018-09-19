@@ -2,6 +2,10 @@
 # gino created on 2018/9/18
 
 import hashlib
+import random
+import string
+
+import numpy as np
 
 
 class HashRing(object):
@@ -75,7 +79,13 @@ class HashRing(object):
         this long value represents a place on the hash ring.
         md5 is currently used because it mixes well.
         """
-        return int(hashlib.md5(key.encode()).hexdigest(), 16)
+        return int(hashlib.md5(key.encode()).hexdigest(), 16) % (2 ** 32)
+
+    def generate_data(self, length, size):
+        data = []
+        for i in range(size):
+            data.append(''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length)))
+        return data
 
 
 # test code
@@ -87,14 +97,29 @@ if __name__ == '__main__':
     ring.add_node("192.168.1.2")
     ring.add_node("192.168.1.3")
 
-    # get node
-    print(ring.get_node("test1"))
-    print(ring.get_node("test2"))
-    print(ring.get_node("test5"))
-    print(ring.get_node("test6"))
+    # check load variance, small is better
+    # total always equals 2**32
+    total = 0
+    diffs = []
+    for i in range(len(ring._sorted_keys)):
+        if i + 1 != len(ring._sorted_keys):
+            diff = ring._sorted_keys[i + 1] - ring._sorted_keys[i]
+            diffs.append(diff)
+            print(diff)
+            total += diff
+        else:
+            diff = 2 ** 32 - ring._sorted_keys[i] + ring._sorted_keys[0]
+            diffs.append(diff)
+            print(diff)
+            total += diff
+    print("total:{}".format(total))
+    print("variance:{}".format(int(np.var(diffs))))
+    print("\n")
 
-    # get node position
-    print(ring.get_node_pos("test1"))
-    print(ring.get_node_pos("test2"))
-    print(ring.get_node_pos("test5"))
-    print(ring.get_node_pos("test6"))
+    # generate data for simulating
+    data = ring.generate_data(8, 8)
+    for item in data:
+        print(item)
+        print(ring.get_node(item))
+        print(ring.get_node_pos(item))
+        print("\n")
